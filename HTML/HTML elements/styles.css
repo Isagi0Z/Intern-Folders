@@ -1,0 +1,14 @@
+body{
+    background-color: aquamarine;
+}
+h1{
+    color: darkseagreen;
+    border: 3px salmon;
+}
+p{
+    color: forestgreen;
+}
+p{
+    border: 20px solid darkgreen;
+    margin: 100px;
+}

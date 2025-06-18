@@ -1,0 +1,60 @@
+*{
+ margin: 0;
+ padding: 0;
+
+
+}
+.bg{
+	background-image: url("img8.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: repeat;
+	position: relative;
+    overflow: hidden;
+  max-height:120vh ;
+}
+.bg3{
+	position: absolute;
+	top: 520px ;
+}
+.bg1{
+	left: 0px;
+	right: 0;
+	
+	display: block;
+	position: absolute;
+	bottom: 0px;
+}
+.bg2{left: 200px;
+	right: 0;
+	display: block;
+	position: absolute;
+	width: 40vh;
+	height: 80vh;
+	bottom: 40px;
+}.bg4{
+	left: 800px;
+	right: 0;
+	display: block;
+	position: absolute;
+	width: 40vh;
+	height: 80vh;
+	bottom: -70px;
+}
+.bg5{
+	left: 300px;
+    display: block;
+	position: absolute;
+	width: 10vh;
+	height: 10vh;
+	bottom: 240px;
+}
+.bg7{
+	left: 500px;
+	width: 10vh;
+	height: 10vh;
+	bottom: 240px;
+}
+.mq{
+	bottom:20px;
+}

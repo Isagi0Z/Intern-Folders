@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+
+
+.bg{
+    background-image: url("Images/warland.jpg");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    max-height:120vh ;
+    overflow: hidden;
+}
+.bg2{
+    position:fixed;
+    top: 90px;
+    align-items: center;
+    
+}
+.bg3{
+    position:fixed;
+    top: 120px;
+    align-items: center;
+    
+}
+
+}
