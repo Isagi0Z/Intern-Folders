@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydownup</title>
+</head>
+<body>
+    <input type="text" id="keyboardInput" placeholder="Type something..." />
+<p id="keyPressed">You pressed: </p>
+
+    <script>
+         let box = document.getElementById("keyboardInput");
+
+box.addEventListener("keydown", function (event) {
+  document.getElementById("keyPressed").innerText = "You pressed: " + event.key;
+});
+
+    </script>
+
+</body>
+</html>

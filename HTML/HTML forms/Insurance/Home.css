@@ -1,0 +1,42 @@
+h1{
+   text-align: center;
+   margin-top: 90px;
+   font-size: 90px;
+}
+
+.center-box{
+    margin-top: 70px;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgba(221, 255, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    
+}
+
+
+
+body {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  background-color: rgba(0, 213, 245, 0.986);  /* Keep only this */
+  font-family: Arial, sans-serif;
+}
+
+button{
+    padding: 12px 24px;
+    text-align: center;
+    background-color: darkgoldenrod;
+    border-radius: 100px;
+}
