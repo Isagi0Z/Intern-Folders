@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/app.css">
+  <title>Insurance</title>
+</head>
+<body>
+  <h1>Welcome to Insurance</h1>
+  <div class="box">
+    <div class="box1"><a href="Home.html"><button>Home</button></div>
+  <div class="box2"><button>Services</button></div>
+  <div class="box4"><button>About Us</button></div>
+  <div class="box5"><button>FAQ</button></div>
+  </div>
+  
+ 
+<h2>New User Registration</h2>
+
+  <form>
+    
+    <div class="center1">
+        
+      <label for="Policy-holdername">Policy Holder Name: </label>
+      <input type="text" id="Policy-holdername" name="Policy-holdername" required><br><br>
+
+      <label for="age">Policy Holder Age: </label>
+      <input type="number" id="age" name="age" required><br><br>
+
+      <button id="btn" type="button">Submit</button>
+    </div>
+  </form>
+
+  <script>
+    let b = document.getElementById("btn");
+    b.onclick = function () {
+      let age = document.getElementById("age").value;
+      if (age < 25) {
+        alert("You are not eligible to apply");
+      } else {
+        alert("You are eligible");
+      }
+    };
+  </script>
+</body>
+</html>

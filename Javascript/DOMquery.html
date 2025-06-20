@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="title" class="input[type='text']">Captain</div>
+<div id ="Mass" class="student red">Another red student</div>
+<div class="student green">Green student</div>
+<input type="text" value="Name Textbox" />
+<input type="password" value="Password Field" />
+<div class="student red">Student 1</div>
+<div class="student red">Student 2</div>
+<div class="student green">Student 3</div>
+
+<script>
+let firstRed=document.querySelector(".red");
+console.log(firstRed);
+let fir=document.querySelector("#Mass");
+console.log(fir);
+let firstTextInput=document.querySelector("input[type='text']");
+firstTextInput.style.border="2px solid red";
+console.log("Value",firstTextInput.value);
+let redStudents=document.querySelectorAll(".student.red");
+console.log(redStudents);
+redStudents.forEach(s=>{
+    s.innerText="Updated bro! No more Red";
+});
+</script>
+</body>
+</html>

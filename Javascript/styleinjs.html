@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="Professor">Money Heist</h1>
+    <button onclick="highlight()">Click Me!</button>
+    <p id="info">This is to see if it works on buttons</p>
+
+    <script>
+    document.getElementById("Professor").style.color="red";
+    document.getElementById("Professor").style.backgroundColor="green";
+    function highlight(){
+        let para=document.getElementById("info");
+        para.style.backgroundColor="lightblue";
+        para.style.border="5px solid red";
+        para.style.display="block";
+    }
+    </script>
+</body>
+</html>

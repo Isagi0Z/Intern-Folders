@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="namebox" placeholder="Enter your name: " />
+    <h2 id="preview">Live Name: </h2>
+   <script>
+        let input=document.getElementById("namebox");
+        input.addEventListener("input",function(){
+            let name=input.value;
+            document.getElementById("preview").innerText="Live Name: " + name;
+        });
+    </script> 
+</body>
+</html>
