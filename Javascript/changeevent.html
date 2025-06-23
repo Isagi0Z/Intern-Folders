@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change event</title>
+</head>
+<body>
+    <input type="text" id="emailInput" placeholder="Enter email" />
+    <p id="output"></p>
+</body>
+
+<script>
+    let email=document.getElementById("emailInput");
+    email.addEventListener("change",function(){
+        document.getElementById("output").innerText="You entered: " + email.value;
+    });
+</script>
+</html>

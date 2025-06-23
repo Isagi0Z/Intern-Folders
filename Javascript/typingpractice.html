@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypingPractice</title>
+</head>
+
+<body>
+    <h2>Typing Practice</h2>
+    <p>Target: <b>JavaScipt</b></p>
+    <input id="typeBox" />
+
+    <p >You Typed: <span id="liveText"></span></p>
+    <p id="message"></p>
+<style>
+    body{font-family: Arial, Helvetica, sans-serif;}
+        #targetWord {font-size: 24px; margin-bottom: 10px;}
+        #typed { font-size: 20px;color: blue;}
+        #status{margin-top: 10px;font-weight: bold;}  
+    
+</style>
+<script>
+    let answer="javascript";
+    let box=document.getElementById("typeBox");
+    let text=document.getElementById("liveText");
+    let msg=document.getElementById("message");
+    box.addEventListener("input",function(){
+        let typed=box.value;
+        text.innerText=typed;
+
+        if(answer.startsWith(typed)){
+            text.style.color="green";
+            msg.innerText="";
+            if(typed===answer){
+                msg.innerText="Correct! ";
+            }
+        }
+        else{
+            text.style.color="red";
+            msg.innerText="Wrong Letters";
+        }
+    })
+</script>
+</html>

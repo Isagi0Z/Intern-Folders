@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loginform</title>
+</head>
+<body>
+    <form id="loginForm">
+        <label>Username: </label>
+        <input type="text" id="Username" /><br><br>
+        <label>Password:  </label>
+        <input type="password" id="password" /><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <p id="msg"></p>    
+</body>
+<script>
+    let form=document.getElementById("loginForm")
+    form.addEventListener("submit",function(e){
+        e.preventDefault();
+
+        let user=document.getElementById("Username").value;
+        let pass=document.getElementById("password").value;
+
+        if(user === "" || pass === ""){
+            document.getElementById("msg").innerText="All field are required! ";
+            document.getElementById("msg").style.color="red";
+        }
+        else{
+            document.getElementById("msg").innerText='Welcome, ${user}!';
+            document.getElementById("msg").style.color="green";
+        }
+    });
+</script>
+</html>

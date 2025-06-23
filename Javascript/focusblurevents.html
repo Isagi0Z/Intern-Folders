@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus and Blur</title>
+</head>
+<body>
+    <input type="text" id="nameInput" placeholder="Enter name:">
+    <p id="helperText" style="color: rgb(255, 0, 0);">
+</body>
+<script>
+    let box=document.getElementById("nameInput");
+    let help=document.getElementById("helperText");
+
+    box.addEventListener("focus",function(){
+        box.style.border="2px solid yellow";
+        help.innerText="Enter ur name.";
+
+    });
+
+    box.addEventListener("blur",function(){
+        box.style.border="";
+        help.innerText="";
+    })
+</script>
+</html>

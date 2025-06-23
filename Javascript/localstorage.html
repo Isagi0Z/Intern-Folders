@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage</title>
+</head>
+<body>
+    <input type="text" id="nameInput" placeholder="Enter name" />
+    <button id="saveBtn">Save name</button>
+    <p id="msg"></p>
+</body>
+<script>
+    let nameBox=document.getElementById("nameInput");
+    let saveBtn=document.getElementById("saveBtn");
+    let msg=document.getElementById("msg");
+
+    saveBtn.addEventListener("click",function(){
+        let typedName=nameBox.value;
+        localStorage.setItem("myName",typedName);
+        msg.innerText="Name saved! Hello, "+ typedName;
+    });
+
+    window.addEventListener("load",function(){
+        let savedName=localStorage.getItem("myName");
+        if(savedName){
+            msg.innerText="Welcome back, "+savedName;
+        }
+    });
+</script>
+</html>
