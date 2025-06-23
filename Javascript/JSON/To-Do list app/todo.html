@@ -16,6 +16,7 @@
         let taskList=document.getElementById("taskList");
 
         let tasks=JSON.parse(localStorage.getItem("tasks")) || [];
+        
         function renderTasks(){
             taskList.innerHTML="";
 
