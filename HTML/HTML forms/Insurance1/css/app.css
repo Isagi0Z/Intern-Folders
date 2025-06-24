@@ -3,16 +3,21 @@ h1{
     font-size: 70px;
     text-align: center;
 }
-
+h5{
+    margin-top: -60px;
+    font-size: 30px;
+    text-align: center;
+}
     
 .center{
-    width: 500px;
-    height: 200px;
+    width: 350px;
+    height: 250px;
     margin: 650px;
     padding: 100px;
-    margin-top: -1140px;
-    background-color: transparent;
+    margin-top: -1160px;
+    background-color: blanchedalmond;
     border-radius: 150px;
+    filter: grayscale(70%);
 }
 body {
     margin: 0;
@@ -29,9 +34,10 @@ label{
 
 .box3{
 display: grid;
-    grid-template-columns: 450px;
-   
+    grid-template-columns: 250px;
+    
 }
+
 .box1{
     width: 1000px;
     margin-top: -150px;
@@ -54,20 +60,25 @@ display: grid;
     padding: 800px;
 }
 .box{
-    margin-top: -420px;
+    margin-top: -450px;
     padding: 420px;
+    align-items: center;
+}
+.box input{
+    align-items: center;
 }
 h2{
     margin-top: -1140px;
     text-align: center;
     font-size: 50px;
 }
-.center1{
-    width: 500px;
-    height: 200px;
-    margin: 650px;
-    padding: 100px;
-    margin-top: -50px;
-    background-color: transparent;
-    border-radius: 150px;
+
+
+.namebox{
+    width: 100px;
+    height: 50px;
+    
+}
+.namebox input{
+    width: 300px;
 }

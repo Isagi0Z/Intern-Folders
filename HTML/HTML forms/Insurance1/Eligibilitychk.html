@@ -9,26 +9,32 @@
 <body>
   <h1>Welcome to Insurance</h1>
   <div class="box">
-    <div class="box1"><a href="Home.html"><button>Home</button></a></div>
-    <div class="box2"><button>Services</button></div>
-    <div class="box4"><button>About Us</button></div>
-    <div class="box5"><button>FAQ</button></div>
+    <nav>
+      <ul>
+        <div class="box1"><li><a href="Home.html">Home</a></li></div>
+        <div class="box2"><li><a href="#">About</a></li></div>
+        <div class="box4"><li><a href="#">Services</a></li></div>
+        <div class="box5"><li><a href="#">FAQ</a></li></div>
+      </ul>
+    </nav>    
   </div>
   
   
-  <h2>New User Registration</h2>
-
+  
+<div class="center">
   <form>
-    <div class="center1">
-      <label for="Policy-holdername">Policy Holder Name: </label>
+    <h5>New User Registration</h5>
+    <div class="namebox">
+      <label for="Policy-holdername">PolicyHolder Name: </label>
+      <div class="namebox">
       <input type="text" id="Policy-holdername" name="Policy-holdername" required><br><br>
 
-      <label for="age">Policy Holder Age: </label>
-      <input type="number" id="age" name="age" required><br><br>
+      <label for="age">PolicyHolder Age: </label>
+      <input type="number" id="age" name="age" required></div><br><br><br><br><br><br>
 
-      <button id="btn" type="button">Submit</button>
+      <div class="box3"><button id="btn" type="button">Submit</button></div>
     </div>
-  </form>
+  </form></div>
 
   <script>
     let b = document.getElementById("btn");
@@ -43,3 +49,5 @@
   </script>
 </body>
 </html>
+
+  
