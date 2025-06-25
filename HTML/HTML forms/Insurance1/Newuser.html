@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New user Registration</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <body>
+  <h1>Welcome to Insurance</h1>
+  <div class="box">
+    <nav>
+      <ul>
+        <div class="box1"><li><a href="Home.html">Home</a></li></div>
+        <div class="box2"><li><a href="#">About</a></li></div>
+        <div class="box4"><li><a href="#">Services</a></li></div>
+        <div class="box5"><li><a href="#">FAQ</a></li></div>
+      </ul>
+    </nav>    
+  </div>
+
+  <div class="center1">
+    <form>
+      <h5>New User Registration</h5>
+      <div class="centerbox">
+      <div class="userbox">
+      <label for="namefield">Policy-Holder Name </label>
+      <br><br>
+        <input type="text" id="namefield" name="namefield" required></div>
+         <br><br><div class="userbox1">
+        <label for="age">Policy-Holder Age </label>
+        <br><br>
+      <input type="number" id="agefield" name="agefield" required></div><br><br>
+      
+      <div class="userbox">
+      <label for="contact">Enter Contact </label>
+      <br><br>
+        <input type="number" id="contact" name="contact" required></div><br><br>
+
+      <div class="userbox1">
+      <label for="email">Enter Email </label>
+      <br><br>
+        <input type="email" id="email" name="email" required></div><br><br>
+        </div>
+        <div class="userbox2">
+        <select id="insurancetype" name="insurancetype" required>
+          <option value="" disabled selected>Select Insurance Type</option>
+          <option value="health">Health Insurance</option>
+          <option value="life">Life Insurance</option>
+          <option value="vehicle">Vehicle Insurance</option>
+      </select></div>
+
+      <button id="btn" type="button">Register</button>
+    </form>
+</div>
+<script>
+      let users=localStorage.getItem("users");
+      users=users?JSON.parse(users):[];
+      let latestuser=users[users.length-1];
+      document.getElementById("namefield").value = latestuser.name;
+  document.getElementById("agefield").value = latestuser.age;
+
+  let b = document.getElementById("btn");
+  b.onclick = function () {
+    let name = document.getElementById("namefield").value;
+    let age = document.getElementById("agefield").value;
+    let contact = document.getElementById("contact").value;
+    let email = document.getElementById("email").value;
+    let insurancetype = document.getElementById("insurancetype").value;
+    let newUser={
+          name: name,
+          age: age,
+          contact: contact,
+          email: email,
+          insurancetype: insurancetype
+        };
+        let registeredUsers = localStorage.getItem("registeredUsers");
+        registeredUsers = registeredUsers ? JSON.parse(registeredUsers) : [];
+        registeredUsers.push(newUser);
+        localStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
+        alert("Registration successful!");
+        window.location.href = "life.html"; // redirect to life insurance page
+  }
+    </script>
+</body>
+</html>

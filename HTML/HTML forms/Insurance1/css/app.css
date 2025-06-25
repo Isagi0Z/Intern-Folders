@@ -16,7 +16,7 @@ h5{
     padding: 100px;
     margin-top: -1160px;
     background-color: blanchedalmond;
-    border-radius: 150px;
+    border-radius: 5px;
     filter: grayscale(70%);
 }
 body {
@@ -82,3 +82,65 @@ h2{
 .namebox input{
     width: 300px;
 }
+.userbox{
+    
+    position: relative;
+  left: -70px
+
+}
+.userbox1{
+    margin-top: -109px;
+    position: relative;
+    left: 250px
+    
+}
+.centerbox{
+    left: 50px;
+    
+}
+
+.center1{
+    width: 450px;
+    height: 400px;
+    margin: 650px;
+    padding: 100px;
+    margin-top: -1160px;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    filter: grayscale(70%);
+}
+
+.center2{
+    width: 450px;
+    height: 700px;
+    margin: 650px;
+    padding: 100px;
+    margin-top: -1160px;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    filter: grayscale(70%);
+}
+
+.userbox2{
+    padding: 70px;
+    margin-top: -50px;
+}
+select{
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+button{
+    width: 200px;
+    height: 50px;
+    padding: -50;
+    text-align: center;
+    font-size: 20px;
+    margin-top: -10px;
+    background-color: #0c5ed0; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+

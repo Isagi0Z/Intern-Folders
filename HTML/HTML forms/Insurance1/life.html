@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Insurance</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <h1>Welcome to Insurance</h1>
+    <div class="box">
+    <nav>
+      <ul>
+        <div class="box1"><li><a href="Home.html">Home</a></li></div>
+        <div class="box2"><li><a href="#">About</a></li></div>
+        <div class="box4"><li><a href="#">Services</a></li></div>
+        <div class="box5"><li><a href="#">FAQ</a></li></div>
+      </ul>
+    </nav>    
+  </div>
+
+    <div class="center2">
+        <form>
+    <h5>New User Registration for Life Insurance</h5>  
+    <div class="userbox">
+      <label for="namefield">Policy-Holder Name </label>
+      <br><br>
+        <input type="text" id="namefield" name="namefield" required></div>
+         <br><br><div class="userbox1">
+        <label for="age">Policy-Holder Age </label>
+        <br><br>
+      <input type="number" id="agefield" name="agefield" required></div><br><br>
+      
+      <div class="userbox">
+      <label for="contact">Enter Contact </label>
+      <br><br>
+        <input type="number" id="contact" name="contact" required></div><br><br>
+
+      <div class="userbox1">
+      <label for="email">Enter Email </label>
+      <br><br>
+        <input type="email" id="email" name="email" required></div><br><br>
+<hr style="background-color: rgb(208, 14, 170);">
+        <div class="userbox">
+      <label for="nomfield">Nominee Name </label>
+      <br><br>
+        <input type="text" id="nomfield" name="nomfield" required></div><br><br>
+
+        <div class="userbox1">
+      <label for="amttonom">Amount Paid to the <br>Nominee </label>
+      <br><br>
+        <input type="number" id="amttonom" name="amttonom" required></div>
+
+        <div class="userbox2">
+        <select id="chooseplan" name="chooseplan" required>
+          <option value="" disabled selected>Choose Term Plan</option>
+          <option id="10yr" value="10yr">10 Years</option>
+          <option id="20yr" value="20yr">20 Years</option>
+          <option id="30yr" value="30yr">30 Years</option>
+      </select></div>
+<hr style="background-color: rgb(208, 14, 170);">
+<br>
+<button id="btn" type="button">Calculate</button><br><br><br><br>
+<div class="userbox">
+      <label for="monpay">Monthly payment: </label>
+      <br><br>
+        <input type="number" id="monpay" name="monpay" required></div><br><br>
+<div class="userbox1">
+        <label for="matyr">Maturity Year: </label>
+      <br><br>
+        <input type="number" id="matyr" name="matyr" required></div><br><br>
+
+        
+        <script>
+  
+  let registeredUsers = localStorage.getItem("registeredUsers");
+  registeredUsers = registeredUsers ? JSON.parse(registeredUsers) : [];
+  let latestuser = registeredUsers[registeredUsers.length - 1];
+  if (latestuser) {
+    document.getElementById("namefield").value = latestuser.name;
+    document.getElementById("agefield").value = latestuser.age;
+    document.getElementById("contact").value = latestuser.contact;
+    document.getElementById("email").value = latestuser.email;
+  }
+
+  document.getElementById("btn").onclick = function () {
+    let amttonom = parseFloat(document.getElementById("amttonom").value);
+    let chooseplan = document.getElementById("chooseplan").value;
+    let startyr = 2025;
+    let maturityyr;
+    let totmon;
+    let monpayment;
+
+    if (chooseplan === "10yr") {
+      maturityyr = startyr + 10;
+      totmon = 10 * 12;
+    } else if (chooseplan === "20yr") {
+      maturityyr = startyr + 20;
+      totmon = 20 * 12;
+    } else if (chooseplan === "30yr") {
+      maturityyr = startyr + 30;
+      totmon = 30 * 12;
+    }
+
+    if (amttonom && totmon) {
+      monpayment = amttonom / totmon;
+      monpayment = monpayment.toFixed(2);
+
+    
+      localStorage.setItem("maturityyr", maturityyr);
+      localStorage.setItem("monpayment", monpayment);
+
+    
+      document.getElementById("monpay").value = monpayment;
+      document.getElementById("matyr").value = maturityyr;
+    } else {
+      alert("Please enter Amount and choose a valid plan.");
+    }
+  };
+</script>
+
+
+</body>
+</html>

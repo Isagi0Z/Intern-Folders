@@ -25,11 +25,11 @@
   <form>
     <h5>New User Registration</h5>
     <div class="namebox">
-      <label for="Policy-holdername">PolicyHolder Name: </label>
+      <label for="Policy-holdername">PolicyHolder Name </label>
       <div class="namebox">
       <input type="text" id="Policy-holdername" name="Policy-holdername" required><br><br>
 
-      <label for="age">PolicyHolder Age: </label>
+      <label for="age">PolicyHolder Age </label>
       <input type="number" id="age" name="age" required></div><br><br><br><br><br><br>
 
       <div class="box3"><button id="btn" type="button">Submit</button></div>
@@ -40,10 +40,21 @@
     let b = document.getElementById("btn");
     b.onclick = function () {
       let age = document.getElementById("age").value;
+      let name = document.getElementById("Policy-holdername").value;
       if (age < 25) {
         alert("You are not eligible to apply");
       } else {
         alert("You are eligible");
+        let newUser={
+          name: name,
+          age: age
+        };  
+
+        let users=localStorage.getItem("users");
+        users=users?JSON.parse(users):[];
+        users.push(newUser); 
+        localStorage.setItem("users",JSON.stringify(users));
+        window.location.href="Newuser.html";
       }
     };
   </script>
