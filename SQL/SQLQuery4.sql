@@ -1,0 +1,7 @@
+BEGIN TRANSACTION;
+
+
+-- COMMIT;
+-- or
+-- ROLLBACK;
+ROLLBACK;
