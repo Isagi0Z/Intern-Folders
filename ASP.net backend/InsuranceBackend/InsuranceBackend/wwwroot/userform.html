@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insurance User Form</title>
+</head>
+<body>
+    <h1>Insurance User Form</h1>
+    <h2>Register User</h2>
+    <input id="name" placeholder="Enter name" />
+    <input id="email" placeholder="Enter email" />
+    <button onclick="submitUser()">Submit</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        async function submitUser()
+        {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            const response = await fetch('/api/user/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email })
+            });
+
+            const result = await response.text();
+            document.getElementById("result").innerText = result;
+        }
+    </script>
